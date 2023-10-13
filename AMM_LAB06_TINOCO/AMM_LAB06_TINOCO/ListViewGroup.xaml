@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AMM_LAB06_TINOCO.ListViewGroup">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvStudents" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                     Spacing="50"
+                                     BackgroundColor="Black">
+                                <Label Text="{Binding Name}" 
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                                <Label Text="{Binding LastName}" 
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                                <Label Text="{Binding Adress}" 
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                                <Label Text="{Binding Age}" 
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
