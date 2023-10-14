@@ -4,31 +4,10 @@
              x:Class="AMM_LAB06_TINOCO.ListViewGroup">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvStudents" >
+            <ListView x:Name ="sectionView" IsGroupingEnabled="true" GroupDisplayBinding="{Binding LongName}" GroupShortNameBinding="{Binding ShortName}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal"
-                                     Spacing="50"
-                                     BackgroundColor="Black">
-                                <Label Text="{Binding Name}" 
-                                   TextColor="White"
-                                   FontSize="Medium"
-                                   />
-                                <Label Text="{Binding LastName}" 
-                                   TextColor="White"
-                                   FontSize="Medium"
-                                   />
-                                <Label Text="{Binding Adress}" 
-                                   TextColor="White"
-                                   FontSize="Medium"
-                                   />
-                                <Label Text="{Binding Age}" 
-                                   TextColor="White"
-                                   FontSize="Medium"
-                                   />
-                            </StackLayout>
-                        </ViewCell>
+                        <TextCell Text="{Binding FullName}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
