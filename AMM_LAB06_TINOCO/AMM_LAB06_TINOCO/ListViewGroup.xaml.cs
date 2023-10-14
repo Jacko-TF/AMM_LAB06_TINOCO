@@ -16,12 +16,13 @@ namespace AMM_LAB06_TINOCO
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListViewGroup : ContentPage
     {
+        //Coleccion de sections para listar
         ObservableCollection<Section> sections = new ObservableCollection<Section>();
         public ObservableCollection<Section> Sections { get { return sections; } }
         public ListViewGroup()
         {
             InitializeComponent();
-            sections = new ObservableCollection<Section>();
+            //Inicializando datos
             var sectionA = new Section()
             {
                 LongName = "Seccion A",
@@ -63,6 +64,7 @@ namespace AMM_LAB06_TINOCO
             sections.Add(sectionC);
             sections.Add(sectionD);
 
+            //Seteando datos al ItemSource de nuestro ListView
             sectionView.ItemsSource = sections;
         }
     }
